@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
  } from 'react-native'
 import { getMetricMetaInfo, timeToString } from '../utils/helpers'
+import { submitEntry, removeEntry } from '../utils/api'
 import { Ionicons } from '@expo/vector-icons'
 
 import DateHeader from './DateHeader'
@@ -78,6 +79,7 @@ export default class AddEntry extends Component {
     // Navigate to home
 
     // Save to 'DB'
+    submitEntry({ key, entry })
 
     // Clear local notification
   }
@@ -90,6 +92,7 @@ export default class AddEntry extends Component {
     // Route to Home
 
     // Update to 'DB'
+    removeEntry(key)
   }
 
   render() {
