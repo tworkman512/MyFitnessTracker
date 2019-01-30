@@ -6,7 +6,11 @@ import {
  } from 'react-native'
 import { connect } from 'react-redux'
 
-import { getMetricMetaInfo, timeToString, getDailyReminderValue } from '../utils/helpers'
+import {
+  getMetricMetaInfo,
+  timeToString,
+  getDailyReminderValue
+} from '../utils/helpers'
 import { submitEntry, removeEntry } from '../utils/api'
 import { Ionicons } from '@expo/vector-icons'
 import { addEntry } from '../actions'
@@ -162,4 +166,6 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(AddEntry)
+export default connect(
+  mapStateToProps
+)(AddEntry)
