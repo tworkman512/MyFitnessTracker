@@ -3,12 +3,14 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Platform,
+  StyleSheet,
 } from 'react-native'
 import { FontAwesome, Entypo } from '@expo/vector-icons'
 
 export default function EntryStepper({ max, unit, step, value, onIncrement, onDecrement }) {
   return (
-    <View>
+    <View style={[styles.row, { justifyContent: 'space-between'}]}>
       <View>
         <TouchableOpacity onPress={onDecrement}>
           <FontAwesome name='minus' size={30} color={'black'} />
@@ -24,3 +26,11 @@ export default function EntryStepper({ max, unit, step, value, onIncrement, onDe
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
+  },
+})
