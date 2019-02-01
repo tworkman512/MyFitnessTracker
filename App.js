@@ -12,16 +12,10 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={ createStore(reducer) }>
-      <View style={styles.container}>
+      <View style={{flex: 1}}>
         <AddEntry />
       </View>
       </Provider>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'purple',
-  },
-});
