@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import { gray } from '../utils/colors'
 
-export default function EntrySlider({ max, unit, step, value, onChange }) {
+export default function MetricSlider({ max, unit, step, value, onChange }) {
   return (
     <View style={styles.row}>
       <Slider

@@ -9,7 +9,7 @@ import {
 import { FontAwesome, Entypo } from '@expo/vector-icons'
 import { purple, gray, white } from '../utils/colors'
 
-export default function EntryStepper({ max, unit, step, value, onIncrement, onDecrement }) {
+export default function MetricStepper({ max, unit, step, value, onIncrement, onDecrement }) {
   return (
     <View style={[styles.row, {justifyContent: 'space-between'}]}>
       {Platform.OS === 'ios'

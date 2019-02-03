@@ -19,8 +19,8 @@ import { Ionicons } from '@expo/vector-icons'
 import { addEntry } from '../actions'
 
 import DateHeader from './DateHeader'
-import EntrySlider from './EntrySlider'
-import EntryStepper from './EntryStepper'
+import MetricSlider from './MetricSlider'
+import MetricStepper from './MetricStepper'
 import TextButton from './TextButton'
 
 function SubmitBtn ({ onPress }) {
@@ -141,12 +141,12 @@ class AddEntry extends Component {
             <View key={key} style={styles.row}>
               {getIcon()}
               {type === 'slider'
-                ? <EntrySlider
+                ? <MetricSlider
                     value={value}
                     onChange={(value) => this.slide(key, value)}
                     {...rest}
                   />
-                : <EntryStepper
+                : <MetricStepper
                     value={value}
                     onIncrement={() => this.increment(key)}
                     onDecrement={() => this.decrement(key)}
