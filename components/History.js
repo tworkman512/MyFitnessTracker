@@ -20,7 +20,7 @@ class History extends Component {
     ready: false,
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const { dispatch } = this.props
 
     fetchCalendarResults()
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   }
 })
 
-function mapStateToProps (entries) {
+function mapStateToProps(entries) {
   return {
     entries
   }

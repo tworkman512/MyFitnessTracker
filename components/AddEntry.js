@@ -7,6 +7,7 @@ import {
   StyleSheet,
  } from 'react-native'
 import { connect } from 'react-redux'
+import { addEntry } from '../actions'
 
 import {
   getMetricMetaInfo,
@@ -16,7 +17,6 @@ import {
 import { submitEntry, removeEntry } from '../utils/api'
 import { white, purple } from '../utils/colors'
 import { Ionicons } from '@expo/vector-icons'
-import { addEntry } from '../actions'
 
 import DateHeader from './DateHeader'
 import MetricSlider from './MetricSlider'
