@@ -10,7 +10,8 @@ import { Provider } from 'react-redux'
 import reducer from './reducers'
 import { purple, white } from './utils/colors'
 import { Constants } from 'expo'
-import Tabs from './components/Tabs'
+// import Tabs from './components/Tabs'
+import MainNavigator from './components/MainNavigator'
 
 function FitnessStatusBar({ backgroundColor, ...props }) {
   return (
@@ -26,7 +27,8 @@ export default class App extends Component {
       <Provider store={ createStore(reducer) }>
       <View style={{flex: 1}}>
         <FitnessStatusBar backgroundColor={purple} barStyle='light-content' />
-        <Tabs />
+        {/* <Tabs /> */}
+        <MainNavigator />
       </View>
       </Provider>
     )
