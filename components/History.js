@@ -13,8 +13,13 @@ import { fetchCalendarResults } from '../utils/api'
 import UdacityFitnessCalendar from 'udacifitness-calendar'
 import DateHeader from './DateHeader'
 import MetricCard from './MetricCard'
+import { AppLoading } from 'expo'
 
 class History extends Component {
+  state = {
+    ready: false,
+  }
+
   componentDidMount () {
     const { dispatch } = this.props
 
@@ -27,7 +32,9 @@ class History extends Component {
           }))
         }
       })
-      .then(() => this.setState(() => ({ready: true})))
+      .then(() => this.setState(() => ({
+        ready: true
+      })))
   }
 
   renderItem = ({ today, ...metrics}, formattedDate, key) => (
@@ -58,7 +65,12 @@ class History extends Component {
   }
 
   render() {
+    const { ready } = this.state
     const { entries } = this.props
+
+    if (ready === false) {
+      return <AppLoading />
+    }
 
     return (
       <UdacityFitnessCalendar
