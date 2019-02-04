@@ -32,3 +32,10 @@ export default function MetricCard({ date, metrics }) {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  metric: {
+    flexDirection: 'row',
+    marginTop: 12,
+  }
+})
